@@ -1,0 +1,84 @@
+./sdriver.pl -t trace11.txt -s ./tsh -a "-p"
+#
+# trace11.txt - Forward SIGINT to every process in foreground process group
+#
+tsh> ./mysplit 4
+Job [1] (16436) terminated by signal 2
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+  883 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+  895 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+ 1610 pts/14   R      1:26 ./tsh -p
+ 1612 pts/14   T      0:00 ./myspin 4
+ 1630 pts/14   R      1:25 ./tsh -p
+ 1632 pts/14   T      0:00 ./myspin 4
+ 2298 pts/14   R      1:10 ./tsh -p
+ 2300 pts/14   T      0:00 ./myspin 4
+ 2386 pts/14   R      1:08 ./tsh -p
+ 2388 pts/14   T      0:00 ./myspin 4
+ 5190 pts/0    Ss+    0:00 /bin/bash
+14422 pts/14   R      0:34 ./tsh -p
+14481 pts/14   T      0:00 ./myspin 4
+14587 pts/12   Ss+    0:00 /bin/bash
+16006 pts/14   S+     0:00 make test11
+16059 pts/14   S+     0:00 /bin/sh -c ./sdriver.pl -t trace11.txt -s ./tsh -a "-p"
+16097 pts/14   S+     0:00 /usr/bin/perl ./sdriver.pl -t trace11.txt -s ./tsh -a -p
+16346 pts/14   R+     0:00 ./tsh -p
+16861 pts/14   R      0:00 /bin/ps a
+19025 pts/7    Ss+    0:00 -bash
+23824 pts/16   Ss+    0:00 /bin/bash
+25943 pts/14   Ss     0:00 /bin/bash
+26863 pts/14   R      3:42 ./tsh -p
+26865 pts/14   T      0:00 ./myspin 4
+27121 pts/14   R      3:39 ./tsh -p
+27123 pts/14   T      0:00 ./myspin 4
+27232 pts/14   R      3:34 ./tsh -p
+27234 pts/14   T      0:00 ./myspin 4
+27291 pts/14   R      3:32 ./tsh -p
+27293 pts/14   T      0:00 ./myspin 4
+27515 pts/14   R      3:31 ./tsh -p
+27518 pts/14   T      0:00 ./myspin 4
+27591 pts/14   R      3:32 ./tsh -p
+27593 pts/14   T      0:00 ./myspin 4
+27654 pts/14   R      3:30 ./tsh -p
+27656 pts/14   T      0:00 ./myspin 4
+27848 pts/14   R      3:25 ./tsh -p
+27850 pts/14   T      0:00 ./myspin 4
+28013 pts/14   R      3:25 ./tsh -p
+28016 pts/14   T      0:00 ./myspin 4
+28033 pts/14   R      3:24 ./tsh -p
+28035 pts/14   T      0:00 ./myspin 4
+28281 pts/14   R      3:20 ./tsh -p
+28283 pts/14   T      0:00 ./myspin 4
+28821 pts/14   R      3:12 ./tsh -p
+28823 pts/14   T      0:00 ./myspin 4
+29063 pts/16   R      3:10 ./tsh -p
+29066 pts/16   T      0:00 ./myspin 4
+29111 pts/16   R      3:10 ./tsh -p
+29114 pts/16   T      0:00 ./myspin 4
+29124 pts/16   R      3:10 ./tsh -p
+29126 pts/16   T      0:00 ./myspin 4
+29183 pts/16   R      3:09 ./tsh -p
+29186 pts/16   T      0:00 ./myspin 4
+30241 pts/16   R      2:25 ./tsh -p
+30243 pts/16   T      0:00 ./myspin 4
+30423 pts/14   R      2:20 ./tsh -p
+30425 pts/14   T      0:00 ./myspin 4
+30660 pts/14   R      2:20 ./tsh -p
+30662 pts/14   T      0:00 ./myspin 4
+31089 pts/14   R      2:18 ./tsh -p
+31091 pts/14   T      0:00 ./myspin 4
+31138 pts/14   R      2:16 ./tsh -p
+31140 pts/14   T      0:00 ./myspin 4
+31170 pts/14   R      2:12 ./tsh -p
+31172 pts/14   T      0:00 ./myspin 4
+31226 pts/14   R      2:12 ./tsh -p
+31228 pts/14   T      0:00 ./myspin 4
+31276 pts/14   R      2:11 ./tsh -p
+31278 pts/14   T      0:00 ./myspin 4
+31349 pts/14   R      2:07 ./tsh -p
+31351 pts/14   T      0:00 ./myspin 4
+31387 pts/14   R      2:07 ./tsh -p
+31389 pts/14   T      0:00 ./myspin 4
+32332 pts/16   R      1:51 ./tsh -p
+32334 pts/16   T      0:00 ./myspin 4
